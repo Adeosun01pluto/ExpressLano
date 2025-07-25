@@ -631,7 +631,7 @@ function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-4xl mx-auto"
+            className="mt-16 grid pb-6 grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-4xl mx-auto"
           >
             <div className="text-center">
               <div className="text-2xl md:text-4xl font-bold text-white mb-2">1000+</div>
