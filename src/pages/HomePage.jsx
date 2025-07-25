@@ -289,6 +289,8 @@ function HomePage() {
           <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-blue-400 dark:bg-blue-700 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
         </motion.div> */}
 
+        
+
         {/* Content - Remains on top */}
         <div className="relative z-30 p-6 max-w-4xl mx-auto"> {/* Increased z-index */}
           <motion.h1
