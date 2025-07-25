@@ -1,0 +1,86 @@
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Import our public-facing components
+import Navbar from './components/Navbar';
+import HomePage from './pages/HomePage';
+import TrackPackagePage from './pages/TrackPackagePage';
+import ConsignmentPage from './pages/ConsignmentPage';
+import ShippingPage from './pages/ShippingPage';
+import ContactPage from './pages/ContactPage';
+import AboutUsPage from './pages/AboutUsPage';
+import BlogPage from './pages/BlogPage';
+import Footer from './components/Footer';             // NEW IMPORT
+import ArticleDetailPage from './pages/ArticleDetailPage'; // NEW IMPORT
+import AdminDashboardPage from './pages/AdminDashboardPage';
+
+// Import our Admin components
+
+function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Load dark mode preference from local storage on mount
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      setDarkMode(true);
+      document.documentElement.classList.add('dark');
+    } else {
+      setDarkMode(false);
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
+
+  // Toggle dark mode and update local storage
+  const toggleDarkMode = () => {
+    setDarkMode(prevMode => {
+      const newMode = !prevMode;
+      if (newMode) {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      }
+      return newMode;
+    });
+  };
+
+  return (
+    <Router>
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 font-sans flex flex-col"> {/* Added flex-col */}
+        {/*
+          Conditional rendering of Navbar:
+          The public Navbar is not part of the Admin Dashboard layout.
+        */}
+        {!window.location.pathname.startsWith('/admin') && (
+          <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        )}
+
+        <main className="flex-grow"> {/* NEW: Main content wrapper */}
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/track" element={<TrackPackagePage />} />
+            <Route path="/consignment" element={<ConsignmentPage />} />
+            <Route path="/shipping" element={<ShippingPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/about" element={<AboutUsPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            {/* Dynamic route for individual blog posts */}
+            <Route path="/blog/:articleId" element={<ArticleDetailPage />} /> {/* NEW ROUTE */}
+
+            {/* Admin Dashboard Route */}
+            <Route path="/admin" element={<AdminDashboardPage />} />
+          </Routes>
+        </main>
+
+        {/* Footer is rendered only on public-facing pages */}
+        {!window.location.pathname.startsWith('/admin') && (
+          <Footer />
+        )}
+      </div>
+    </Router>
+  );
+}
+
+export default App;
