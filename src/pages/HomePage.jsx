@@ -261,7 +261,7 @@ function HomePage() {
     <div className="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
 
       {/* Hero Section - Elevated from previous HeroSection.js */}
-      <section className="relative h-screen flex items-center justify-center text-center overflow-hidden px-4">
+      <section className="relative min-h-[60vh] md:h-screen flex items-center justify-center text-center overflow-hidden px-4">
         {/* Background Video */}
         <video
           autoPlay
@@ -305,7 +305,7 @@ function HomePage() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="text-xl md:text-2xl text-indigo-100 mb-10 drop-shadow-md"
+            className="text-lg md:text-2xl text-indigo-100 mb-10 drop-shadow-md"
           >
             Track your packages worldwide with unparalleled accuracy, manage consignments, and get instant shipping quotes.
           </motion.p>

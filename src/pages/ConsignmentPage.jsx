@@ -151,7 +151,7 @@ function ConsignmentPage() {
   };
 
   return (
-    <div className="container min-h-[80vh] mx-auto px-4 py-8 md:py-12 lg:py-16">
+    <div className="container min-h-[80vh] mx-auto px-2 md:px-4 py-8 md:py-12 lg:py-16">
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -165,7 +165,7 @@ function ConsignmentPage() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}
-        className="max-w-4xl mx-auto bg-white dark:bg-gray-800 p-4 md:p-6 lg:p-8 rounded-xl shadow-lg dark:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
+        className="max-w-4xl mx-auto bg-white dark:bg-gray-800 p-2 md:p-6 lg:p-8 rounded-xl shadow-lg dark:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
       >
         <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-6">
           <input
@@ -212,12 +212,12 @@ function ConsignmentPage() {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="mt-6 md:mt-8 border-t border-gray-200 dark:border-gray-700 pt-6 md:pt-8"
           >
-            <h3 className="text-md md:text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
+            <h3 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
               Consignment Details: <span className="text-indigo-600 dark:text-indigo-400 break-all">{packageData.packageId}</span>
             </h3>
 
             {/* Current Status with Enhanced Progress Bar */}
-            <div className="mb-6 md:mb-8 p-4 md:p-6 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-sm border border-gray-100 dark:border-gray-600">
+            <div className="mb-6 md:mb-8 p-2 md:p-6 bg-gray-50 dark:bg-gray-700 rounded-lg shadow-sm border border-gray-100 dark:border-gray-600">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
                 <h4 className="text-lg md:text-xl font-medium text-gray-900 dark:text-white">
                   Current Status:
