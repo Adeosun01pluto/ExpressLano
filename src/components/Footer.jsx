@@ -18,8 +18,8 @@ function Footer() {
         {/* Brand Info */}
         <div className="col-span-1 md:col-span-1">
           <Link to="/" className="flex items-center mb-4">
-            <LuGlobe className="h-9 w-9 text-indigo-500 dark:text-indigo-400 mr-3" />
-            <span className="text-3xl font-extrabold text-white">GlobalTracker</span>
+            {/* <LuGlobe className="h-9 w-9 text-indigo-500 dark:text-indigo-400 mr-3" /> */}
+            <span className="text-3xl font-extrabold text-white">ExpressLano</span>
           </Link>
           <p className="text-gray-400 dark:text-gray-500 text-sm leading-relaxed">
             Your trusted partner for global package tracking, seamless shipping, and comprehensive logistics solutions.
