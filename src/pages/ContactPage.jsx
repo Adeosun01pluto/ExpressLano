@@ -69,10 +69,10 @@ function ContactPage() {
               </h4>
               <p className="text-gray-600 dark:text-gray-400">For general inquiries, send us an email.</p>
               <a
-                href="mailto:info@globaltracker.com"
+                href="mailto:info@expresslano.com"
                 className="inline-flex items-center mt-2 px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-200"
               >
-                <LuMail className="mr-2" /> info@globaltracker.com
+                <LuMail className="mr-2" /> info@expresslano.com
               </a>
             </div>
             <div>
@@ -81,7 +81,7 @@ function ContactPage() {
               </h4>
               <p className="text-gray-600 dark:text-gray-400">Connect with us instantly via chat.</p>
               <a
-                href="https://wa.me/1234567890" // Replace with actual WhatsApp link or chatbot embed
+                href="https://wa.link/2g9bb0" // Replace with actual WhatsApp link or chatbot embed
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center mt-2 px-4 py-2 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors duration-200"

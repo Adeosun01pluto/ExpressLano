@@ -49,11 +49,11 @@ function Footer() {
             </li>
             <li className="flex items-center">
               <LuPhone className="h-5 w-5 mr-3 text-indigo-400" />
-              <a href="tel:+1234567890" className="hover:text-indigo-400 transition-colors duration-200">+1 (234) 567-890</a>
+              <a href="tel:+1234567890" className="hover:text-indigo-400 transition-colors duration-200">+1 (941)-2109-334</a>
             </li>
             <li className="flex items-center">
               <LuMail className="h-5 w-5 mr-3 text-indigo-400" />
-              <a href="mailto:info@globaltracker.com" className="hover:text-indigo-400 transition-colors duration-200">info@globaltracker.com</a>
+              <a href="mailto:info@expresslano.com" className="hover:text-indigo-400 transition-colors duration-200">info@expresslano.com</a>
             </li>
           </ul>
         </div>
