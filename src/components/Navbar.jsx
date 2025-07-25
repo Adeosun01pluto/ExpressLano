@@ -27,7 +27,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            {/* <LuPackage className="h-9 w-9 text-indigo-600 dark:text-indigo-400" /> */}
+            <LuPackage className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
           </motion.div>
           <motion.span
             className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white"
