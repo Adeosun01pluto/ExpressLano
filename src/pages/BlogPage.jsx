@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { LuNewspaper, LuCalendar, LuTag } from 'react-icons/lu'; // React Icons for blog elements
 import { Link } from 'react-router-dom';
-
 // Mock Blog Posts
 const mockBlogPosts = [
   {
@@ -60,6 +59,7 @@ const mockBlogPosts = [
     link: '/blog/understanding-incoterms-2020'
   },
 ];
+
 
 function BlogPage() {
   return (

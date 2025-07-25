@@ -11,10 +11,10 @@ function Navbar({ darkMode, toggleDarkMode }) {
     { name: 'Home', path: '/' },
     // { name: 'Track', path: '/track' },
     { name: 'Consignment', path: '/consignment' },
-    { name: 'Shipping', path: '/shipping' },
+    // { name: 'Shipping', path: '/shipping' },
     { name: 'Contact', path: '/contact' },
     { name: 'About Us', path: '/about' },
-    { name: 'Blog', path: '/blog' },
+    // { name: 'Blog', path: '/blog' },
   ];
 
   return (
@@ -55,7 +55,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
             </Link>
           ))}
           {/* Dark Mode Toggle */}
-          <button
+          {/* <button
             onClick={toggleDarkMode}
             className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             aria-label="Toggle Dark Mode"
@@ -65,12 +65,12 @@ function Navbar({ darkMode, toggleDarkMode }) {
             ) : (
               <LuMoon className="h-5 w-5" />
             )}
-          </button>
+          </button> */}
         </div>
 
         {/* Mobile Menu Button and Toggle */}
         <div className="md:hidden flex items-center space-x-4">
-          <button
+          {/* <button
             onClick={toggleDarkMode}
             className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
             aria-label="Toggle Dark Mode"
@@ -80,7 +80,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
             ) : (
               <LuMoon className="h-5 w-5" />
             )}
-          </button>
+          </button> */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"

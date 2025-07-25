@@ -30,8 +30,8 @@ function Footer() {
         <div>
           <h4 className="text-xl font-semibold text-white mb-6">Quick Links</h4>
           <ul className="space-y-3 text-gray-400 dark:text-gray-500">
-            <li><Link to="/track" className="hover:text-indigo-400 transition-colors duration-200">Track Your Package</Link></li>
-            <li><Link to="/shipping" className="hover:text-indigo-400 transition-colors duration-200">Get a Shipping Quote</Link></li>
+            <li><Link to="/consignment" className="hover:text-indigo-400 transition-colors duration-200">Track Your Package</Link></li>
+            <li><Link to="/" className="hover:text-indigo-400 transition-colors duration-200">Get a Shipping Quote</Link></li>
             <li><Link to="/consignment" className="hover:text-indigo-400 transition-colors duration-200">Consignment</Link></li>
             <li><Link to="/blog" className="hover:text-indigo-400 transition-colors duration-200">Blog & Updates</Link></li>
             <li><Link to="/about" className="hover:text-indigo-400 transition-colors duration-200">About Us</Link></li>

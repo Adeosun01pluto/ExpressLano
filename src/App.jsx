@@ -13,6 +13,7 @@ import BlogPage from './pages/BlogPage';
 import Footer from './components/Footer';             // NEW IMPORT
 import ArticleDetailPage from './pages/ArticleDetailPage'; // NEW IMPORT
 import AdminDashboardPage from './pages/AdminDashboardPage';
+import ScrollToTop from './components/ScrollToTop';
 
 // Import our Admin components
 
@@ -49,6 +50,8 @@ function App() {
   return (
     <Router>
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 font-sans flex flex-col"> {/* Added flex-col */}
+        {/* Place ScrollToTop directly inside Router */}
+        <ScrollToTop /> 
         {/*
           Conditional rendering of Navbar:
           The public Navbar is not part of the Admin Dashboard layout.

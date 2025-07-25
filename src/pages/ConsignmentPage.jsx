@@ -151,7 +151,7 @@ function ConsignmentPage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
+    <div className="container min-h-[80vh] mx-auto px-4 py-8 md:py-12 lg:py-16">
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
