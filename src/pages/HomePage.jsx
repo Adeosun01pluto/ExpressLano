@@ -389,7 +389,7 @@
 //             <LuMapPin className="h-16 w-16 text-indigo-600 dark:text-indigo-400 mx-auto mb-6" />
 //             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">Global Package Tracking</h3>
 //             <p className="text-gray-700 dark:text-gray-300">Track parcels from over 1000 carriers worldwide with real-time updates and detailed history.</p>
-//             <Link to="/track" className="mt-4 inline-flex items-center text-indigo-600 dark:text-indigo-400 font-semibold hover:underline"> {/* Changed to /track */}
+//             <Link to="/consignment" className="mt-4 inline-flex items-center text-indigo-600 dark:text-indigo-400 font-semibold hover:underline"> 
 //               Learn More <LuArrowRight className="ml-1" />
 //             </Link>
 //           </motion.div>
@@ -547,7 +547,7 @@ function HomePage() {
     <div className="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+      <section className="relative pt-12 min-h-screen flex items-center justify-center text-center overflow-hidden">
         {/* Background Video */}
         <video
           autoPlay
@@ -606,7 +606,7 @@ function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row justify-center items-center gap-6"
+            className="flex flex-col sm:flex-row justify-center md:items-center gap-6"
           >
             <Link
               to="/consignment"
@@ -619,7 +619,7 @@ function HomePage() {
             </Link>
             
             <Link
-              to="/"
+              to="/contact"
               className="inline-flex items-center justify-center px-10 py-5 bg-transparent text-white font-bold rounded-2xl border-2 border-white/30 backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 transform hover:scale-105 text-lg"
             >
               <LuTruck className="h-6 w-6 mr-3" /> Get Quote
@@ -631,18 +631,18 @@ function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+            className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-4xl mx-auto"
           >
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">1000+</div>
+              <div className="text-2xl md:text-4xl font-bold text-white mb-2">1000+</div>
               <div className="text-gray-300 font-medium">Global Carriers</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-2xl md:text-4xl font-bold text-white mb-2">99.9%</div>
               <div className="text-gray-300 font-medium">Uptime Guarantee</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
+              <div className="text-2xl md:text-4xl font-bold text-white mb-2">24/7</div>
               <div className="text-gray-300 font-medium">Expert Support</div>
             </div>
           </motion.div>
@@ -675,7 +675,7 @@ function HomePage() {
               variants={itemVariants}
               className="inline-block px-4 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-semibold mb-4"
             >
-              ✨ Why Choose Us
+               Why Choose Us
             </motion.span>
             <motion.h2
               variants={itemVariants}
@@ -796,7 +796,7 @@ function HomePage() {
               variants={itemVariants}
               className="inline-block px-4 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-full text-sm font-semibold mb-4"
             >
-              🚀 Our Services
+               Our Services
             </motion.span>
             <motion.h2
               variants={itemVariants}
@@ -821,7 +821,7 @@ function HomePage() {
                   delivery predictions, and exception handling—all in one dashboard.
                 </p>
                 <Link 
-                  to="/track" 
+                  to="/consignment" 
                   className="inline-flex items-center text-indigo-600 dark:text-indigo-400 font-bold text-lg hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors group"
                 >
                   Start Tracking 
@@ -907,7 +907,7 @@ function HomePage() {
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row justify-center items-center gap-6"
+            className="flex flex-col sm:flex-row justify-center md:items-center gap-6"
           >
             <Link
               to="/consignment"
@@ -931,17 +931,17 @@ function HomePage() {
             variants={itemVariants}
             className="mt-12 flex items-center justify-center gap-8 text-gray-300"
           >
-            <div className="flex items-center gap-2">
+            <div className="flex items-center md:flex-row flex-col gap-2">
               <FaRegCheckCircle className="h-5 w-5 text-green-400" />
-              <span>No setup fees</span>
+              <span className='text-md'>No setup fees</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center md:flex-row flex-col gap-2">
               <FaRegCheckCircle className="h-5 w-5 text-green-400" />
-              <span>Cancel anytime</span>
+              <span className='text-md'>Cancel anytime</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center md:flex-row flex-col gap-2">
               <FaRegCheckCircle className="h-5 w-5 text-green-400" />
-              <span>24/7 support</span>
+              <span className='text-md'>24/7 support</span>
             </div>
           </motion.div>
         </motion.div>
