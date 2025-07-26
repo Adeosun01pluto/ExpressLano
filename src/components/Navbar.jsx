@@ -21,16 +21,16 @@ function Navbar({ darkMode, toggleDarkMode }) {
 
   return (
     <nav className="bg-white dark:bg-gray-800 shadow-md dark:shadow-xl sticky top-0 z-40 transition-colors duration-300">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div className="container mx-auto px-2 md:px-4 flex justify-between items-center">
         {/* Logo and Site Title */}
-        <Link to="/" className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center">
           <motion.span
             className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <img src={express} alt="ExpressLano Logo" className="w-24 h-12 md:h-18 md:w-52 object-cover" />
+            <img src={express} alt="ExpressLano Logo" className="w-40 h-16 md:h-18 md:w-52 object-cover" />
             {/* <img src={logo} alt="ExpressLano Logo" className="block md:hidden h-8 w-16 object-contain" /> */}
           </motion.span>
         </Link>

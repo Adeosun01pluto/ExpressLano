@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { LuMail, LuPhone, LuMapPin, LuLinkedin, LuTwitter, LuFacebook, LuGlobe } from 'react-icons/lu';
+import express from "../assets/expresslanowhite.png"; // Import logo if needed
 
 function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,10 +18,18 @@ function Footer() {
 
         {/* Brand Info */}
         <div className="col-span-1 md:col-span-1">
-          <Link to="/" className="flex items-center mb-4">
-            {/* <LuGlobe className="h-9 w-9 text-indigo-500 dark:text-indigo-400 mr-3" /> */}
-            <span className="text-3xl font-extrabold text-white">ExpressLano</span>
-          </Link>
+          {/* Logo and Site Title */}
+                  <Link to="/" className="flex items-center">
+                    <motion.span
+                      className=""
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.1 }}
+                    >
+                      <img src={express} alt="ExpressLano Logo" className="w-48 h-24 md:h-18 md:w-52 object-cover" />
+                      {/* <img src={logo} alt="ExpressLano Logo" className="block md:hidden h-8 w-16 object-contain" /> */}
+                    </motion.span>
+                  </Link>
           <p className="text-gray-400 dark:text-gray-500 text-sm leading-relaxed">
             Your trusted partner for global package tracking, seamless shipping, and comprehensive logistics solutions.
           </p>
