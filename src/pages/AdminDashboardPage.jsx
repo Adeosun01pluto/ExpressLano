@@ -304,8 +304,6 @@ function AdminDashboardPage() {
         packageData={selectedPackage}
         onSave={handleSavePackage} // This is where the invoiceFile is passed
         isEditing={isEditing}
-        isLoading={loading}
-        setLoading={setLoading}
       />
 
       <PackageDetailsModal
@@ -319,12 +317,9 @@ function AdminDashboardPage() {
         onClose={() => setIsUpdateStatusModalOpen(false)}
         packageData={selectedPackage}
         onUpdateStatus={handleStatusUpdate}
-        isLoading={loading}
-        setLoading={setLoading}
       />
     </div>
   );
 }
 
 export default AdminDashboardPage;
-

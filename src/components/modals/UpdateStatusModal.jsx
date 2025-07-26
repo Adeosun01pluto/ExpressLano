@@ -3,9 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { GoXCircle } from 'react-icons/go';
 import { LuTruck, LuMapPin, LuClipboardPen } from 'react-icons/lu'; // Added icons
-import LoadingSpinner from '../LoadingSpinner';
 
-function UpdateStatusModal({ isOpen, onClose, packageData, onUpdateStatus, isLoading, setLoading }) {
+function UpdateStatusModal({ isOpen, onClose, packageData, onUpdateStatus }) {
   const [newStatus, setNewStatus] = useState('');
   const [location, setLocation] = useState('');
   const [note, setNote] = useState('');
@@ -166,14 +165,12 @@ function UpdateStatusModal({ isOpen, onClose, packageData, onUpdateStatus, isLoa
                 >
                   Cancel
                 </button>
-                {isLoading ? <LoadingSpinner /> : 
-                  <button
+                <button
                   type="submit"
                   className="px-6 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors"
-                  >
-                    Update Status
-                  </button>
-                }
+                >
+                  Update Status
+                </button>
               </div>
             </form>
           </motion.div>

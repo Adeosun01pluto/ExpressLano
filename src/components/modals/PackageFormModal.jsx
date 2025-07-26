@@ -5,9 +5,8 @@ import { GoXCircle, GoUpload } from 'react-icons/go';
 import { LuFileText, LuTrash2, LuExternalLink } from 'react-icons/lu'; // Added FaCirclePlus for adding package items
 import { v4 as uuidv4 } from 'uuid'; // Import uuid for unique keys for dynamic items
 import { FaCirclePlus } from "react-icons/fa6";
-import LoadingSpinner from '../LoadingSpinner';
 
-function PackageFormModal({ isOpen, onClose, packageData, onSave, isEditing, isLoading }) {
+function PackageFormModal({ isOpen, onClose, packageData, onSave, isEditing }) {
   const [formData, setFormData] = useState({
     packageId: '', // Your custom PKGxxx ID
     senderName: '',
@@ -909,14 +908,12 @@ function PackageFormModal({ isOpen, onClose, packageData, onSave, isEditing, isL
                 >
                   Cancel
                 </button>
-                {isLoading ? <LoadingSpinner /> : 
-                  <button
+                <button
                   type="submit"
                   className="px-6 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors"
-                  >
-                    {isEditing ? 'Save Changes' : 'Create Package'}
-                  </button>
-                }
+                >
+                  {isEditing ? 'Save Changes' : 'Create Package'}
+                </button>
               </div>
             </form>
           </motion.div>
