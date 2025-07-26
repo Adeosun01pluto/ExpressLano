@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom'; // useLocation to highlight active link
 import { motion } from 'framer-motion';
 import { LuMenu, LuX, LuSun, LuMoon, LuPackage } from 'react-icons/lu'; // React Icons for menu, close, sun, moon, and logo
+import logo from "../assets/logo.png"; // Import logo if needed
+import express from "../assets/expresslano.png"; // Import logo if needed
 
 function Navbar({ darkMode, toggleDarkMode }) {
   const [isOpen, setIsOpen] = useState(false); // State for mobile menu toggle
@@ -22,20 +24,14 @@ function Navbar({ darkMode, toggleDarkMode }) {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo and Site Title */}
         <Link to="/" className="flex items-center space-x-2">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <LuPackage className="h-6 w-6 text-indigo-600 dark:text-indigo-400" />
-          </motion.div>
           <motion.span
             className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            ExpressLano
+            <img src={express} alt="ExpressLano Logo" className="w-24 h-12 md:h-18 md:w-52 object-cover" />
+            {/* <img src={logo} alt="ExpressLano Logo" className="block md:hidden h-8 w-16 object-contain" /> */}
           </motion.span>
         </Link>
 

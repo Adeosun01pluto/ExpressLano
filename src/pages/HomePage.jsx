@@ -954,6 +954,511 @@
 
 
 
+// import React from 'react';
+// import { motion } from 'framer-motion';
+// import { Link } from 'react-router-dom';
+// import {
+//   LuTruck, LuPackage, LuMapPin, LuDollarSign, LuShieldCheck,
+//   LuClock, LuUsers, LuArrowRight, LuZap, LuGlobe, LuStar,
+//     LuHeadphones, LuLock
+// } from 'react-icons/lu';
+// import { IoBarChart } from "react-icons/io5";
+// import { FaRegCheckCircle } from "react-icons/fa";
+
+
+// const sectionVariants = {
+//   hidden: { opacity: 0, y: 50 },
+//   visible: { 
+//     opacity: 1, 
+//     y: 0, 
+//     transition: { 
+//       duration: 0.5, 
+//       ease: "easeOut",
+//       staggerChildren: 0.1
+//     } 
+//   }
+// };
+
+// const itemVariants = {
+//   hidden: { opacity: 0, scale: 0.8 },
+//   visible: { 
+//     opacity: 1, 
+//     scale: 1, 
+//     transition: { 
+//       duration: 0.4, 
+//       ease: "easeOut" 
+//     } 
+//   }
+// };
+
+// const floatAnimation = {
+//   y: [-10, 10, -10],
+//   transition: {
+//     duration: 2,
+//     repeat: Infinity,
+//     ease: "easeInOut"
+//   }
+// };
+
+// function HomePage() {
+//   const videoUrl = "https://cardvalid.vercel.app/herovideo.mp4";
+
+//   return (
+//     <div className="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+
+//       {/* Hero Section */}
+//       <section className="relative pt-12 min-h-screen flex items-center justify-center text-center overflow-hidden">
+//         {/* Background Video */}
+//         <video
+//           autoPlay
+//           loop
+//           muted
+//           playsInline
+//           className="absolute inset-0 w-full h-full object-cover z-0"
+//         >
+//           <source src={videoUrl} type="video/mp4" />
+//           Your browser does not support the video tag.
+//         </video>
+
+//         {/* Dark Overlay for better text readability */}
+//         <div className="absolute inset-0 bg-black/40 z-10"></div>
+
+//         {/* Animated Gradient Overlay */}
+//         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/60 via-purple-900/50 to-blue-900/60 z-20"></div>
+
+//         {/* Content */}
+//         <div className="relative z-30 px-4 max-w-6xl mx-auto">
+//           <motion.div
+//             initial={{ opacity: 0, y: 30 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.8, delay: 0.2 }}
+//             className="mb-6"
+//           >
+//             <span className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium border border-white/20">
+//               🌍 Trusted by 50,000+ businesses worldwide
+//             </span>
+//           </motion.div>
+
+//           <motion.h1
+//             initial={{ opacity: 0, y: 30 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 1, delay: 0.4 }}
+//             className="text-4xl md:text-7xl xl:text-8xl font-black text-white leading-[0.9] mb-8 tracking-tight"
+//           >
+//             Ship.{' '}
+//             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+//               Track.
+//             </span>{' '}
+//             Deliver.
+//           </motion.h1>
+
+//           <motion.p
+//             initial={{ opacity: 0, y: 30 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 1, delay: 0.6 }}
+//             className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed font-light"
+//           >
+//             The world's most advanced logistics platform. Track packages from 1000+ carriers, 
+//             get instant quotes, and manage shipments with military-grade precision.
+//           </motion.p>
+
+//           <motion.div
+//             initial={{ opacity: 0, y: 30 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.8, delay: 0.8 }}
+//             className="flex flex-col sm:flex-row justify-center md:items-center gap-6"
+//           >
+//             <Link
+//               to="/consignment"
+//               className="group relative inline-flex items-center justify-center px-10 py-5 bg-white text-gray-900 font-bold rounded-2xl shadow-2xl hover:shadow-white/20 transition-all duration-300 transform hover:scale-105 text-lg overflow-hidden"
+//             >
+//               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+//               <span className="relative z-10 group-hover:text-white transition-colors duration-300 flex items-center">
+//                 <LuMapPin className="h-6 w-6 mr-3" /> Track Package
+//               </span>
+//             </Link>
+            
+//             <Link
+//               to="/contact"
+//               className="inline-flex items-center justify-center px-10 py-5 bg-transparent text-white font-bold rounded-2xl border-2 border-white/30 backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 transform hover:scale-105 text-lg"
+//             >
+//               <LuTruck className="h-6 w-6 mr-3" /> Get Quote
+//             </Link>
+//           </motion.div>
+
+//           {/* Stats */}
+//           <motion.div
+//             initial={{ opacity: 0, y: 30 }}
+//             animate={{ opacity: 1, y: 0 }}
+//             transition={{ duration: 0.8, delay: 1 }}
+//             className="mt-16 grid pb-6 grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 max-w-4xl mx-auto"
+//           >
+//             <div className="text-center">
+//               <div className="text-2xl md:text-4xl font-bold text-white mb-2">1000+</div>
+//               <div className="text-gray-300 font-medium">Global Carriers</div>
+//             </div>
+//             <div className="text-center">
+//               <div className="text-2xl md:text-4xl font-bold text-white mb-2">99.9%</div>
+//               <div className="text-gray-300 font-medium">Uptime Guarantee</div>
+//             </div>
+//             <div className="text-center">
+//               <div className="text-2xl md:text-4xl font-bold text-white mb-2">24/7</div>
+//               <div className="text-gray-300 font-medium">Expert Support</div>
+//             </div>
+//           </motion.div>
+//         </div>
+
+//         {/* Floating Elements */}
+//         <motion.div
+//           animate={floatAnimation}
+//           className="absolute top-20 right-10 w-20 h-20 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 hidden lg:block"
+//         />
+//         <motion.div
+//           animate={{ ...floatAnimation, transition: { ...floatAnimation.transition, delay: 1 } }}
+//           className="absolute bottom-32 left-16 w-16 h-16 bg-purple-500/20 rounded-full backdrop-blur-sm border border-purple-300/30 hidden lg:block"
+//         />
+//       </section>
+
+//       {/* Features Grid */}
+//       <section className="py-24 px-4 bg-white dark:bg-gray-900 relative overflow-hidden">
+//         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-blue-900/10 dark:to-purple-900/10"></div>
+        
+//         <motion.div
+//           className="max-w-7xl mx-auto relative z-10"
+//           variants={sectionVariants}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true, amount: 0.3 }}
+//         >
+//           <div className="text-center mb-20">
+//             <motion.span 
+//               variants={itemVariants}
+//               className="inline-block px-4 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-semibold mb-4"
+//             >
+//               Why Choose Us
+//             </motion.span>
+//             <motion.h2
+//               variants={itemVariants}
+//               className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white mb-6 leading-tight"
+//             >
+//               Built for Modern
+//               <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent block">
+//                 Logistics
+//               </span>
+//             </motion.h2>
+//             <motion.p
+//               variants={itemVariants}
+//               className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"
+//             >
+//               Experience the next generation of shipping management with AI-powered tracking, 
+//               real-time analytics, and seamless integrations.
+//             </motion.p>
+//           </div>
+
+//           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+//             <motion.div variants={itemVariants} className="group">
+//               <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
+//                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+//                   <LuGlobe className="h-8 w-8 text-white" />
+//                 </div>
+//                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Global Network</h3>
+//                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+//                   Connect with over 1000 carriers worldwide. From local deliveries to international freight, 
+//                   we've got every corner of the globe covered.
+//                 </p>
+//               </div>
+//             </motion.div>
+
+//             <motion.div variants={itemVariants} className="group">
+//               <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
+//                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+//                   <LuZap className="h-8 w-8 text-white" />
+//                 </div>
+//                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Lightning Fast</h3>
+//                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+//                   Get instant quotes, real-time tracking updates, and automated notifications. 
+//                   Speed is in our DNA, efficiency is our promise.
+//                 </p>
+//               </div>
+//             </motion.div>
+
+//             <motion.div variants={itemVariants} className="group">
+//               <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
+//                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+//                   <LuShieldCheck className="h-8 w-8 text-white" />
+//                 </div>
+//                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Fort Knox Security</h3>
+//                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+//                   Military-grade encryption, SOC 2 compliance, and zero-trust architecture. 
+//                   Your data is safer than a Swiss bank vault.
+//                 </p>
+//               </div>
+//             </motion.div>
+
+//             <motion.div variants={itemVariants} className="group">
+//               <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
+//                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+//                   <IoBarChart className="h-8 w-8 text-white" />
+//                 </div>
+//                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Smart Analytics</h3>
+//                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+//                   AI-powered insights, predictive analytics, and custom dashboards. 
+//                   Turn your shipping data into competitive advantage.
+//                 </p>
+//               </div>
+//             </motion.div>
+
+//             <motion.div variants={itemVariants} className="group">
+//               <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
+//                 <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+//                   <LuHeadphones className="h-8 w-8 text-white" />
+//                 </div>
+//                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">White Glove Support</h3>
+//                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+//                   24/7 human support from logistics experts. No chatbots, no waiting. 
+//                   Just real people solving real problems, instantly.
+//                 </p>
+//               </div>
+//             </motion.div>
+
+//             <motion.div variants={itemVariants} className="group">
+//               <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
+//                 <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+//                   <LuLock className="h-8 w-8 text-white" />
+//                 </div>
+//                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Enterprise Ready</h3>
+//                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+//                   API-first architecture, custom integrations, and enterprise SLAs. 
+//                   Scale from startup to Fortune 500 without breaking a sweat.
+//                 </p>
+//               </div>
+//             </motion.div>
+//           </div>
+//         </motion.div>
+//       </section>
+
+//       {/* About Us Section */}
+//       <section className="py-24 px-4 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+//         <div className="absolute inset-0">
+//           <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-200/20 dark:bg-blue-800/20 rounded-full blur-3xl"></div>
+//           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-200/20 dark:bg-purple-800/20 rounded-full blur-3xl"></div>
+//         </div>
+
+//         <motion.div
+//           className="max-w-7xl mx-auto relative z-10"
+//           variants={sectionVariants}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true, amount: 0.3 }}
+//         >
+//           <div className="text-center mb-20">
+//             <motion.span 
+//               variants={itemVariants}
+//               className="inline-block px-4 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-full text-sm font-semibold mb-4"
+//             >
+//               Who We Are
+//             </motion.span>
+//             <motion.h2
+//               variants={itemVariants}
+//               className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white mb-6 leading-tight"
+//             >
+//               Connecting Your Business
+//               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent block">
+//                 to the World
+//               </span>
+//             </motion.h2>
+//             <motion.p
+//               variants={itemVariants}
+//               className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"
+//             >
+//               We provide comprehensive and integrated solutions to optimize your supply chain, connecting businesses and consumers globally.
+//             </motion.p>
+//           </div>
+
+//           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"> {/* Adjusted grid for 5 items */}
+//             {/* Sea Port */}
+//             <motion.div variants={itemVariants}>
+//               <div className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 h-full group hover:shadow-3xl transition-all duration-300">
+//                 <div className="w-full h-48 rounded-2xl mb-6 overflow-hidden">
+//                   <img src="https://expresslanelogs.com/wp-content/uploads/2025/03/Drayage-1-e1712423856276.webp" alt="Sea Port" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+//                 </div>
+//                 <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Sea Port</h3>
+//                 <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
+//                   Sea freight is the backbone of international trade. With around 80% of goods moved by sea, it plays a pivotal role in connecting businesses and consumers across the globe.
+//                 </p>
+//                 <Link 
+//                   to="/contact" 
+//                   className="inline-flex items-center text-indigo-600 dark:text-indigo-400 font-bold text-lg hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors group"
+//                 >
+//                   Learn More 
+//                   <LuArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+//                 </Link>
+//               </div>
+//             </motion.div>
+
+//             {/* Air Cargo */}
+//             <motion.div variants={itemVariants}>
+//               <div className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 h-full group hover:shadow-3xl transition-all duration-300">
+//                 <div className="w-full h-48 rounded-2xl mb-6 overflow-hidden">
+//                   <img src="https://expresslanelogs.com/wp-content/uploads/2025/03/desktop-wallpaper-do-you-do-air-freight-kaizen-freight-solut-1.jpg" alt="Air Cargo" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+//                 </div>
+//                 <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Air Cargo</h3>
+//                 <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
+//                   Quick, efficient air freight solutions, with soaring results. Take flight, with our speedy, reliable air freight solutions. Furthermore, air freight connects businesses to markets across continents, facilitating international trade and market expansion.
+//                 </p>
+//                 <Link 
+//                   to="/contact" 
+//                   className="inline-flex items-center text-green-600 dark:text-green-400 font-bold text-lg hover:text-green-700 dark:hover:text-green-300 transition-colors group"
+//                 >
+//                   Learn More 
+//                   <LuArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+//                 </Link>
+//               </div>
+//             </motion.div>
+
+//             {/* Road and Trucking */}
+//             <motion.div variants={itemVariants}>
+//               <div className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 h-full group hover:shadow-3xl transition-all duration-300">
+//                 <div className="w-full h-48 rounded-2xl mb-6 overflow-hidden">
+//                   <img src="https://expresslanelogs.com/wp-content/uploads/2025/03/Trucking-Rates.jpg" alt="Road and Trucking" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+//                 </div>
+//                 <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Road and Trucking</h3>
+//                 <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
+//                   Road Freight services are crucial for businesses and consumers alike. They facilitate the efficient flow of goods, support local and global trade, and contribute to economic growth.
+//                 </p>
+//                 <Link 
+//                   to="/contact" 
+//                   className="inline-flex items-center text-purple-600 dark:text-purple-400 font-bold text-lg hover:text-purple-700 dark:hover:text-purple-300 transition-colors group"
+//                 >
+//                   Learn More 
+//                   <LuArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+//                 </Link>
+//               </div>
+//             </motion.div>
+
+//             {/* Import & Export Consolidation */}
+//             <motion.div variants={itemVariants}>
+//               <div className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 h-full group hover:shadow-3xl transition-all duration-300">
+//                 <div className="w-full h-48 rounded-2xl mb-6 overflow-hidden">
+//                   <img src="https://expresslanelogs.com/wp-content/uploads/2025/03/654db567a01afbcbb29115d1_Starting-an-Import-Export-Business-in-Singapore-1.jpg" alt="Import & Export Consolidation" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+//                 </div>
+//                 <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Import & Export Consolidation</h3>
+//                 <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
+//                   In the fast-paced world of international commerce, reducing shipping costs and streamlining logistics processes are vital for businesses seeking a competitive edge.
+//                 </p>
+//                 <Link 
+//                   to="/contact" 
+//                   className="inline-flex items-center text-teal-600 dark:text-teal-400 font-bold text-lg hover:text-teal-700 dark:hover:text-teal-300 transition-colors group"
+//                 >
+//                   Learn More 
+//                   <LuArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+//                 </Link>
+//               </div>
+//             </motion.div>
+
+//             {/* Warehouse Distribution */}
+//             <motion.div variants={itemVariants}>
+//               <div className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 h-full group hover:shadow-3xl transition-all duration-300">
+//                 <div className="w-full h-48 rounded-2xl mb-6 overflow-hidden">
+//                   <img src="https://expresslanelogs.com/wp-content/uploads/2025/03/shutterstock_1841074717.webp" alt="Warehouse Distribution" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+//                 </div>
+//                 <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Warehouse Distribution</h3>
+//                 <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
+//                   In the ever-evolving world of commerce, where seamless warehousing and distribution are the cornerstones of a successful supply chain, Denholm Good Logistics offer an integrated solution that optimises your inventory management.
+//                 </p>
+//                 <Link 
+//                   to="/contact" 
+//                   className="inline-flex items-center text-orange-600 dark:text-orange-400 font-bold text-lg hover:text-orange-700 dark:hover:text-orange-300 transition-colors group"
+//                 >
+//                   Learn More 
+//                   <LuArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+//                 </Link>
+//               </div>
+//             </motion.div>
+//           </div>
+//         </motion.div>
+//       </section>
+
+//       {/* Final CTA */}
+//       <section className="py-24 px-4 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white relative overflow-hidden">
+//         <div className="absolute inset-0">
+//           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+//           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+//         </div>
+
+//         <motion.div
+//           className="max-w-5xl mx-auto text-center relative z-10"
+//           variants={sectionVariants}
+//           initial="hidden"
+//           whileInView="visible"
+//           viewport={{ once: true, amount: 0.3 }}
+//         >
+//           <motion.h2
+//             variants={itemVariants}
+//             className="text-4xl md:text-7xl font-black mb-8 leading-tight"
+//           >
+//             Ready to Ship
+//             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent block">
+//               The Future?
+//             </span>
+//           </motion.h2>
+          
+//           <motion.p
+//             variants={itemVariants}
+//             className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed"
+//           >
+//             Join 50,000+ businesses who've revolutionized their logistics with Global Tracker. 
+//             Your first 100 shipments are on us.
+//           </motion.p>
+
+//           <motion.div
+//             variants={itemVariants}
+//             className="flex flex-col sm:flex-row justify-center md:items-center gap-6"
+//           >
+//             <Link
+//               to="/consignment"
+//               className="group relative inline-flex items-center justify-center px-12 py-6 bg-white text-gray-900 font-bold rounded-2xl shadow-2xl hover:shadow-white/20 transition-all duration-300 transform hover:scale-105 text-xl overflow-hidden"
+//             >
+//               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+//               <span className="relative z-10 group-hover:text-white transition-colors duration-300 flex items-center">
+//                 <LuPackage className="h-7 w-7 mr-3" /> Track Package
+//               </span>
+//             </Link>
+            
+//             <Link
+//               to="/contact"
+//               className="inline-flex items-center justify-center px-12 py-6 bg-transparent text-white font-bold rounded-2xl border-2 border-white/30 backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 transform hover:scale-105 text-xl"
+//             >
+//               <LuUsers className="h-7 w-7 mr-3" /> Talk to Sales
+//             </Link>
+//           </motion.div>
+
+//           <motion.div
+//             variants={itemVariants}
+//             className="mt-12 flex items-center justify-center gap-8 text-gray-300"
+//           >
+//             <div className="flex items-center md:flex-row flex-col gap-2">
+//               <FaRegCheckCircle className="h-5 w-5 text-green-400" />
+//               <span className='text-md'>No setup fees</span>
+//             </div>
+//             <div className="flex items-center md:flex-row flex-col gap-2">
+//               <FaRegCheckCircle className="h-5 w-5 text-green-400" />
+//               <span className='text-md'>Cancel anytime</span>
+//             </div>
+//             <div className="flex items-center md:flex-row flex-col gap-2">
+//               <FaRegCheckCircle className="h-5 w-5 text-green-400" />
+//               <span className='text-md'>24/7 support</span>
+//             </div>
+//           </motion.div>
+//         </motion.div>
+//       </section>
+//     </div>
+//   );
+// }
+
+// export default HomePage;
+
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -1120,7 +1625,7 @@ function HomePage() {
       </section>
 
       {/* Features Grid */}
-      <section className="py-24 px-4 bg-white dark:bg-gray-900 relative overflow-hidden">
+      <section className="py-16 sm:py-20 lg:py-24 px-4 bg-white dark:bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50 dark:from-blue-900/10 dark:to-purple-900/10"></div>
         
         <motion.div
@@ -1128,9 +1633,9 @@ function HomePage() {
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <motion.span 
               variants={itemVariants}
               className="inline-block px-4 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-semibold mb-4"
@@ -1139,7 +1644,7 @@ function HomePage() {
             </motion.span>
             <motion.h2
               variants={itemVariants}
-              className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white mb-4 sm:mb-6 leading-tight px-4"
             >
               Built for Modern
               <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent block">
@@ -1148,21 +1653,21 @@ function HomePage() {
             </motion.h2>
             <motion.p
               variants={itemVariants}
-              className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"
+              className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed px-4"
             >
               Experience the next generation of shipping management with AI-powered tracking, 
               real-time analytics, and seamless integrations.
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <motion.div variants={itemVariants} className="group">
-              <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
+              <div className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <LuGlobe className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Global Network</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4">Global Network</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
                   Connect with over 1000 carriers worldwide. From local deliveries to international freight, 
                   we've got every corner of the globe covered.
                 </p>
@@ -1170,12 +1675,12 @@ function HomePage() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="group">
-              <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
+              <div className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <LuZap className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Lightning Fast</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4">Lightning Fast</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
                   Get instant quotes, real-time tracking updates, and automated notifications. 
                   Speed is in our DNA, efficiency is our promise.
                 </p>
@@ -1183,12 +1688,12 @@ function HomePage() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="group">
-              <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
+              <div className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <LuShieldCheck className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Fort Knox Security</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4">Fort Knox Security</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
                   Military-grade encryption, SOC 2 compliance, and zero-trust architecture. 
                   Your data is safer than a Swiss bank vault.
                 </p>
@@ -1196,12 +1701,12 @@ function HomePage() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="group">
-              <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
+              <div className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <IoBarChart className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Smart Analytics</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4">Smart Analytics</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
                   AI-powered insights, predictive analytics, and custom dashboards. 
                   Turn your shipping data into competitive advantage.
                 </p>
@@ -1209,12 +1714,12 @@ function HomePage() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="group">
-              <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
+              <div className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
                 <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <LuHeadphones className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">White Glove Support</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4">White Glove Support</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
                   24/7 human support from logistics experts. No chatbots, no waiting. 
                   Just real people solving real problems, instantly.
                 </p>
@@ -1222,12 +1727,12 @@ function HomePage() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="group">
-              <div className="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
+              <div className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 hover:shadow-2xl hover:scale-105 transition-all duration-300 h-full">
                 <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <LuLock className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Enterprise Ready</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4">Enterprise Ready</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm sm:text-base">
                   API-first architecture, custom integrations, and enterprise SLAs. 
                   Scale from startup to Fortune 500 without breaking a sweat.
                 </p>
@@ -1238,7 +1743,7 @@ function HomePage() {
       </section>
 
       {/* About Us Section */}
-      <section className="py-24 px-4 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+      <section className="py-16 sm:py-20 lg:py-24 px-4 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-200/20 dark:bg-blue-800/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-200/20 dark:bg-purple-800/20 rounded-full blur-3xl"></div>
@@ -1249,9 +1754,9 @@ function HomePage() {
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="text-center mb-20">
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
             <motion.span 
               variants={itemVariants}
               className="inline-block px-4 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-full text-sm font-semibold mb-4"
@@ -1260,7 +1765,7 @@ function HomePage() {
             </motion.span>
             <motion.h2
               variants={itemVariants}
-              className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white mb-4 sm:mb-6 leading-tight px-4"
             >
               Connecting Your Business
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent block">
@@ -1269,26 +1774,26 @@ function HomePage() {
             </motion.h2>
             <motion.p
               variants={itemVariants}
-              className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed"
+              className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed px-4"
             >
               We provide comprehensive and integrated solutions to optimize your supply chain, connecting businesses and consumers globally.
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"> {/* Adjusted grid for 5 items */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Sea Port */}
-            <motion.div variants={itemVariants}>
-              <div className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 h-full group hover:shadow-3xl transition-all duration-300">
-                <div className="w-full h-48 rounded-2xl mb-6 overflow-hidden">
+            <motion.div variants={itemVariants} className="sm:col-span-1">
+              <div className="bg-white dark:bg-gray-900 p-6 sm:p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 h-full group hover:shadow-3xl transition-all duration-300">
+                <div className="w-full h-40 sm:h-48 rounded-2xl mb-6 overflow-hidden">
                   <img src="https://expresslanelogs.com/wp-content/uploads/2025/03/Drayage-1-e1712423856276.webp" alt="Sea Port" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Sea Port</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
+                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Sea Port</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
                   Sea freight is the backbone of international trade. With around 80% of goods moved by sea, it plays a pivotal role in connecting businesses and consumers across the globe.
                 </p>
                 <Link 
                   to="/contact" 
-                  className="inline-flex items-center text-indigo-600 dark:text-indigo-400 font-bold text-lg hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors group"
+                  className="inline-flex items-center text-indigo-600 dark:text-indigo-400 font-bold text-base sm:text-lg hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors group"
                 >
                   Learn More 
                   <LuArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -1297,18 +1802,18 @@ function HomePage() {
             </motion.div>
 
             {/* Air Cargo */}
-            <motion.div variants={itemVariants}>
-              <div className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 h-full group hover:shadow-3xl transition-all duration-300">
-                <div className="w-full h-48 rounded-2xl mb-6 overflow-hidden">
+            <motion.div variants={itemVariants} className="sm:col-span-1">
+              <div className="bg-white dark:bg-gray-900 p-6 sm:p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 h-full group hover:shadow-3xl transition-all duration-300">
+                <div className="w-full h-40 sm:h-48 rounded-2xl mb-6 overflow-hidden">
                   <img src="https://expresslanelogs.com/wp-content/uploads/2025/03/desktop-wallpaper-do-you-do-air-freight-kaizen-freight-solut-1.jpg" alt="Air Cargo" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Air Cargo</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
+                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Air Cargo</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
                   Quick, efficient air freight solutions, with soaring results. Take flight, with our speedy, reliable air freight solutions. Furthermore, air freight connects businesses to markets across continents, facilitating international trade and market expansion.
                 </p>
                 <Link 
                   to="/contact" 
-                  className="inline-flex items-center text-green-600 dark:text-green-400 font-bold text-lg hover:text-green-700 dark:hover:text-green-300 transition-colors group"
+                  className="inline-flex items-center text-green-600 dark:text-green-400 font-bold text-base sm:text-lg hover:text-green-700 dark:hover:text-green-300 transition-colors group"
                 >
                   Learn More 
                   <LuArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -1317,18 +1822,18 @@ function HomePage() {
             </motion.div>
 
             {/* Road and Trucking */}
-            <motion.div variants={itemVariants}>
-              <div className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 h-full group hover:shadow-3xl transition-all duration-300">
-                <div className="w-full h-48 rounded-2xl mb-6 overflow-hidden">
+            <motion.div variants={itemVariants} className="sm:col-span-1">
+              <div className="bg-white dark:bg-gray-900 p-6 sm:p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 h-full group hover:shadow-3xl transition-all duration-300">
+                <div className="w-full h-40 sm:h-48 rounded-2xl mb-6 overflow-hidden">
                   <img src="https://expresslanelogs.com/wp-content/uploads/2025/03/Trucking-Rates.jpg" alt="Road and Trucking" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Road and Trucking</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
+                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Road and Trucking</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
                   Road Freight services are crucial for businesses and consumers alike. They facilitate the efficient flow of goods, support local and global trade, and contribute to economic growth.
                 </p>
                 <Link 
                   to="/contact" 
-                  className="inline-flex items-center text-purple-600 dark:text-purple-400 font-bold text-lg hover:text-purple-700 dark:hover:text-purple-300 transition-colors group"
+                  className="inline-flex items-center text-purple-600 dark:text-purple-400 font-bold text-base sm:text-lg hover:text-purple-700 dark:hover:text-purple-300 transition-colors group"
                 >
                   Learn More 
                   <LuArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -1337,18 +1842,18 @@ function HomePage() {
             </motion.div>
 
             {/* Import & Export Consolidation */}
-            <motion.div variants={itemVariants}>
-              <div className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 h-full group hover:shadow-3xl transition-all duration-300">
-                <div className="w-full h-48 rounded-2xl mb-6 overflow-hidden">
+            <motion.div variants={itemVariants} className="sm:col-span-1 lg:col-span-1">
+              <div className="bg-white dark:bg-gray-900 p-6 sm:p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 h-full group hover:shadow-3xl transition-all duration-300">
+                <div className="w-full h-40 sm:h-48 rounded-2xl mb-6 overflow-hidden">
                   <img src="https://expresslanelogs.com/wp-content/uploads/2025/03/654db567a01afbcbb29115d1_Starting-an-Import-Export-Business-in-Singapore-1.jpg" alt="Import & Export Consolidation" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Import & Export Consolidation</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
+                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Import & Export Consolidation</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
                   In the fast-paced world of international commerce, reducing shipping costs and streamlining logistics processes are vital for businesses seeking a competitive edge.
                 </p>
                 <Link 
                   to="/contact" 
-                  className="inline-flex items-center text-teal-600 dark:text-teal-400 font-bold text-lg hover:text-teal-700 dark:hover:text-teal-300 transition-colors group"
+                  className="inline-flex items-center text-teal-600 dark:text-teal-400 font-bold text-base sm:text-lg hover:text-teal-700 dark:hover:text-teal-300 transition-colors group"
                 >
                   Learn More 
                   <LuArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -1356,19 +1861,19 @@ function HomePage() {
               </div>
             </motion.div>
 
-            {/* Warehouse Distribution */}
-            <motion.div variants={itemVariants}>
-              <div className="bg-white dark:bg-gray-900 p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 h-full group hover:shadow-3xl transition-all duration-300">
-                <div className="w-full h-48 rounded-2xl mb-6 overflow-hidden">
+            {/* Warehouse Distribution - Spans 2 columns on larger screens */}
+            <motion.div variants={itemVariants} className="sm:col-span-2 lg:col-span-2">
+              <div className="bg-white dark:bg-gray-900 p-6 sm:p-8 rounded-3xl shadow-2xl border border-gray-100 dark:border-gray-700 h-full group hover:shadow-3xl transition-all duration-300">
+                <div className="w-full h-40 sm:h-48 rounded-2xl mb-6 overflow-hidden">
                   <img src="https://expresslanelogs.com/wp-content/uploads/2025/03/shutterstock_1841074717.webp" alt="Warehouse Distribution" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
-                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Warehouse Distribution</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-8">
+                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">Warehouse Distribution</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
                   In the ever-evolving world of commerce, where seamless warehousing and distribution are the cornerstones of a successful supply chain, Denholm Good Logistics offer an integrated solution that optimises your inventory management.
                 </p>
                 <Link 
                   to="/contact" 
-                  className="inline-flex items-center text-orange-600 dark:text-orange-400 font-bold text-lg hover:text-orange-700 dark:hover:text-orange-300 transition-colors group"
+                  className="inline-flex items-center text-orange-600 dark:text-orange-400 font-bold text-base sm:text-lg hover:text-orange-700 dark:hover:text-orange-300 transition-colors group"
                 >
                   Learn More 
                   <LuArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -1380,7 +1885,7 @@ function HomePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 px-4 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white relative overflow-hidden">
+      <section className="py-16 sm:py-20 lg:py-24 px-4 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
@@ -1391,11 +1896,11 @@ function HomePage() {
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-7xl font-black mb-8 leading-tight"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black mb-6 sm:mb-8 leading-tight px-4"
           >
             Ready to Ship
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent block">
@@ -1405,7 +1910,7 @@ function HomePage() {
           
           <motion.p
             variants={itemVariants}
-            className="text-xl md:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-4"
           >
             Join 50,000+ businesses who've revolutionized their logistics with Global Tracker. 
             Your first 100 shipments are on us.
@@ -1417,37 +1922,37 @@ function HomePage() {
           >
             <Link
               to="/consignment"
-              className="group relative inline-flex items-center justify-center px-12 py-6 bg-white text-gray-900 font-bold rounded-2xl shadow-2xl hover:shadow-white/20 transition-all duration-300 transform hover:scale-105 text-xl overflow-hidden"
+              className="group relative inline-flex items-center justify-center px-8 sm:px-12 py-4 sm:py-6 bg-white text-gray-900 font-bold rounded-2xl shadow-2xl hover:shadow-white/20 transition-all duration-300 transform hover:scale-105 text-lg sm:text-xl overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10 group-hover:text-white transition-colors duration-300 flex items-center">
-                <LuPackage className="h-7 w-7 mr-3" /> Track Package
+                <LuPackage className="h-6 w-6 sm:h-7 sm:w-7 mr-3" /> Track Package
               </span>
             </Link>
             
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center px-12 py-6 bg-transparent text-white font-bold rounded-2xl border-2 border-white/30 backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 transform hover:scale-105 text-xl"
+              className="inline-flex items-center justify-center px-8 sm:px-12 py-4 sm:py-6 bg-transparent text-white font-bold rounded-2xl border-2 border-white/30 backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 transform hover:scale-105 text-lg sm:text-xl"
             >
-              <LuUsers className="h-7 w-7 mr-3" /> Talk to Sales
+              <LuUsers className="h-6 w-6 sm:h-7 sm:w-7 mr-3" /> Talk to Sales
             </Link>
           </motion.div>
 
           <motion.div
             variants={itemVariants}
-            className="mt-12 flex items-center justify-center gap-8 text-gray-300"
+            className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-gray-300"
           >
-            <div className="flex items-center md:flex-row flex-col gap-2">
-              <FaRegCheckCircle className="h-5 w-5 text-green-400" />
-              <span className='text-md'>No setup fees</span>
+            <div className="flex items-center gap-2">
+              <FaRegCheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
+              <span className='text-sm sm:text-base'>No setup fees</span>
             </div>
-            <div className="flex items-center md:flex-row flex-col gap-2">
-              <FaRegCheckCircle className="h-5 w-5 text-green-400" />
-              <span className='text-md'>Cancel anytime</span>
+            <div className="flex items-center gap-2">
+              <FaRegCheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
+              <span className='text-sm sm:text-base'>Cancel anytime</span>
             </div>
-            <div className="flex items-center md:flex-row flex-col gap-2">
-              <FaRegCheckCircle className="h-5 w-5 text-green-400" />
-              <span className='text-md'>24/7 support</span>
+            <div className="flex items-center gap-2">
+              <FaRegCheckCircle className="h-5 w-5 text-green-400 flex-shrink-0" />
+              <span className='text-sm sm:text-base'>24/7 support</span>
             </div>
           </motion.div>
         </motion.div>
