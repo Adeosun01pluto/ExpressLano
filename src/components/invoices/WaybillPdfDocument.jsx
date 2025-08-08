@@ -316,7 +316,7 @@ const WaybillSingleCopyLayout = ({ packageData, copyType }) => {
           <View style={styles.deliveryColumn}>
             <View style={styles.metaRow}>
               <Text style={styles.metaLabel}>Delivery Date:</Text>
-              <Text style={styles.metaValue}>{packageData.deliveryDate || 'N/A'}</Text>
+              <Text style={styles.metaValue}>{packageData.estimatedDeliveryDate || 'N/A'}</Text>
             </View>
             <View style={styles.metaRow}>
               <Text style={styles.metaLabel}>Courier:</Text>
@@ -360,7 +360,7 @@ const WaybillSingleCopyLayout = ({ packageData, copyType }) => {
           <Text style={[styles.cell, styles.addressCell, styles.addressCellRight]}>{packageData?.receiverAddress || ''}</Text>
           <Text style={[styles.cell, styles.partyDetailCell, styles.partyDetailCellRight]}>{packageData?.receiverPhone || ''}</Text>
           <View style={[styles.cell, styles.statusCommentCell, styles.statusCommentCellRight]}>
-            <Text>Status: {packageData?.status || ''}</Text>
+            <Text>Status: {packageData?.status || 'Order Placed'}</Text>
             <Text>Comment: {packageData?.comment || ''}</Text>
           </View>
         </View>
@@ -390,9 +390,9 @@ const WaybillSingleCopyLayout = ({ packageData, copyType }) => {
         {/* Row 4: Total Freight, Mode */}
         <View style={styles.shipmentRow}>
           <Text style={[styles.cell, styles.shipmentCellLabel, styles.cellFirst]}>Total Freight:</Text>
-          <Text style={[styles.cell, styles.shipmentCellValue, styles.shipmentCellRightAlign]}>{packageData?.totalFreight || ''}</Text>
+          <Text style={[styles.cell, styles.shipmentCellValue, styles.shipmentCellRightAlign]}>{packageData?.shippingCost || ''}</Text>
           <Text style={[styles.cell, styles.shipmentCellLabel]}>Mode:</Text>
-          <Text style={[styles.cell, styles.shipmentCellValue]}>{packageData?.mode || ''}</Text>
+          <Text style={[styles.cell, styles.shipmentCellValue]}>{packageData?.typeOfShipment || ''}</Text>
         </View>
         {/* Row 5: Payment Mode */}
         <View style={styles.shipmentRow}>
