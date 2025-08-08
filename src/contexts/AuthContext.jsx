@@ -22,12 +22,6 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [isAdmin, setIsAdmin] = useState(false);
 
-  // List of admin email addresses
-  const adminEmails = [
-    'admin@expreane.com',
-    'your-admin-email@example.com'
-    // Add more admin emails as needed
-  ];
 
   const login = async (email, password) => {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
