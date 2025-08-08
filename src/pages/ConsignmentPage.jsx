@@ -351,6 +351,12 @@ function ConsignmentPage() {
                     <span className="text-gray-700 dark:text-gray-300 break-words">{packageData.itemDetails.itemName}</span>
                   </div>
                 )}
+                {packageData?.quantity && (
+                  <div className="flex items-start">
+                    <strong className="text-gray-900 dark:text-white mr-2 flex-shrink-0">Quantity:</strong>
+                    <span className="text-gray-700 dark:text-gray-300 break-words">{packageData?.quantity}</span>
+                  </div>
+                )}
                 
                 {packageData.typeOfShipment && (
                   <div className="flex items-start">
@@ -398,6 +404,13 @@ function ConsignmentPage() {
                   <div className="flex items-start">
                     <strong className="text-gray-900 dark:text-white mr-2 flex-shrink-0">Destination:</strong>
                     <span className="text-gray-700 dark:text-gray-300 break-words">{packageData.destination}</span>
+                  </div>
+                )}
+
+                {packageData?.estimatedDeliveryDate && (
+                  <div className="flex items-start">
+                    <strong className="text-gray-900 dark:text-white mr-2 flex-shrink-0">Estimated Delivery Date:</strong>
+                    <span className="text-gray-700 dark:text-gray-300 break-words">{packageData?.estimatedDeliveryDate}</span>
                   </div>
                 )}
               </div>
