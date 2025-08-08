@@ -329,10 +329,12 @@ const WaybillSingleCopyLayout = ({ packageData, copyType }) => {
           </View>
           {/* Carrier and Reference No. at the bottom of the right panel */}
           <View style={styles.carrierMetaContainer}>
-            <View style={styles.carrierMetaRow}>
-              <Text style={styles.carrierLabel}>Carrier:</Text>
-              <Text style={styles.carrierValue}>{packageData.carrier || 'N/A'}</Text>
-            </View>
+            {packageData.carrierReferenceNo && (
+              <View style={styles.carrierMetaRow}>
+                <Text style={styles.carrierLabel}>Carrier:</Text>
+                <Text style={styles.carrierValue}>{packageData.carrierReferenceNo}</Text>
+              </View>
+            )}
             <View style={styles.carrierMetaRow}>
               <Text style={styles.carrierLabel}>Departure Time:</Text>
               <Text style={styles.carrierValue}>{packageData.departureTime || 'N/A'}</Text>
@@ -351,7 +353,11 @@ const WaybillSingleCopyLayout = ({ packageData, copyType }) => {
           <Text style={[styles.cell, styles.partyTitleCell, styles.cellTopFirst, styles.cellFirst]}>Shipper</Text>
           <Text style={[styles.cell, styles.partyDetailCell, styles.cellFirst]}>{packageData?.senderName || ''}</Text>
           <Text style={[styles.cell, styles.addressCell, styles.cellFirst]}>{packageData?.senderAddress || ''}</Text>
-          <Text style={[styles.cell, styles.partyDetailCell, styles.cellFirst]}>{packageData?.senderPhone || ''}</Text>
+          {packageData?.senderPhone && (
+            <Text style={[styles.cell, styles.partyDetailCell, styles.cellFirst]}>
+              {packageData.senderPhone}
+            </Text>
+          )}
           <Text style={[styles.cell, styles.partyDetailCell, styles.cellFirst]}>{packageData?.senderEmail || ''}</Text>
         </View>
         <View style={[styles.partyColumn, styles.partyColumnLast]}>
@@ -390,7 +396,7 @@ const WaybillSingleCopyLayout = ({ packageData, copyType }) => {
         {/* Row 4: Total Freight, Mode */}
         <View style={styles.shipmentRow}>
           <Text style={[styles.cell, styles.shipmentCellLabel, styles.cellFirst]}>Total Freight:</Text>
-          <Text style={[styles.cell, styles.shipmentCellValue, styles.shipmentCellRightAlign]}>{packageData?.shippingCost || ''}</Text>
+          <Text style={[styles.cell, styles.shipmentCellValue]}>{packageData?.shippingCost || ''}</Text>
           <Text style={[styles.cell, styles.shipmentCellLabel]}>Mode:</Text>
           <Text style={[styles.cell, styles.shipmentCellValue]}>{packageData?.typeOfShipment || ''}</Text>
         </View>
