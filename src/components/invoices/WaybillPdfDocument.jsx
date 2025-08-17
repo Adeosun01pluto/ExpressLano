@@ -389,14 +389,14 @@ const WaybillSingleCopyLayout = ({ packageData, copyType }) => {
         {/* Row 3: Weight, Quantity */}
         <View style={styles.shipmentRow}>
           <Text style={[styles.cell, styles.shipmentCellLabel, styles.cellFirst]}>Weight:</Text>
-          <Text style={[styles.cell, styles.shipmentCellValue]}>{packageData?.weight || ''}</Text>
+          <Text style={[styles.cell, styles.shipmentCellValue]}>{packageData?.weight || ''}Kg</Text>
           <Text style={[styles.cell, styles.shipmentCellLabel]}>Quantity:</Text>
           <Text style={[styles.cell, styles.shipmentCellValue]}>{packageData?.quantity || ''}</Text>
         </View>
         {/* Row 4: Total Freight, Mode */}
         <View style={styles.shipmentRow}>
           <Text style={[styles.cell, styles.shipmentCellLabel, styles.cellFirst]}>Total Freight:</Text>
-          <Text style={[styles.cell, styles.shipmentCellValue]}>{packageData?.shippingCost || ''}</Text>
+          <Text style={[styles.cell, styles.shipmentCellValue]}>${packageData?.shippingCost || ''}</Text>
           <Text style={[styles.cell, styles.shipmentCellLabel]}>Mode:</Text>
           <Text style={[styles.cell, styles.shipmentCellValue]}>{packageData?.typeOfShipment || ''}</Text>
         </View>
