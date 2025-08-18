@@ -30,7 +30,7 @@ function PackageFormModal({ isOpen, onClose, packageData, onSave, isEditing }) {
     destination: '',
     estimatedDeliveryDate: '',
     comments: '', // Renamed from 'notes'
-
+    trackingProgress: '', // New field for tracking progress
     // New Fields from screenshots
     typeOfShipment: '', // e.g., Air Freight, Sea Transport
     courier: '', // e.g., USPS, DHL

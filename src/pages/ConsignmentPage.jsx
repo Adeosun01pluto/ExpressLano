@@ -233,13 +233,13 @@ function ConsignmentPage() {
               <div className="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-3 md:h-4 mb-2">
                 <motion.div
                   initial={{ width: 0 }}
-                  animate={{ width: `${packageData.progress || 0}%` }}
+                  animate={{ width: `${packageData.trackingProgress || 0}%` }}
                   transition={{ duration: 1.5, ease: "easeOut" }}
                   className="bg-gradient-to-r from-indigo-500 to-indigo-600 h-full rounded-full"
-                  style={{ width: `${packageData.progress || 0}%` }}
+                  style={{ width: `${packageData.trackingProgress || 0}%` }}
                 ></motion.div>
               </div>
-              <p className="text-right text-sm md:text-base text-gray-600 dark:text-gray-400">{packageData.progress || 0}% Complete</p>
+              <p className="text-right text-sm md:text-base text-gray-600 dark:text-gray-400">{packageData.trackingProgress || 0}% Complete</p>
             </div>
 
             {/* Enhanced Sender & Receiver Info */}
